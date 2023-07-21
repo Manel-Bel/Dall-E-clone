@@ -37,7 +37,7 @@ const Poste = () => {
         setloading(false);
       }
     }else{
-      alert('Veuillez generer une image :) ');
+      alert('Veuillez générer une image :) ');
     }
   }
   const handleChange = (event) =>{
@@ -74,14 +74,14 @@ const Poste = () => {
   return (
     <section className='max-w-7xl mx-auto'>
       <div>
-            <h1 className='font-extrabold text-[#22328] text-[32px]'> Create</h1>
-            <p className='mt-2 text-[#666e75] text-[16px] max-w[500px]'> Create imaginative and visually stunning images through by DALL-E AI and share them with the community</p>
+            <h1 className='font-extrabold text-[#22328] text-[32px]'> Créer</h1>
+            <p className='mt-2 text-[#666e75] text-[16px] max-w[500px]'> Créer des images imaginatives et visuellement époustouflantes grâce à DALL-E IA et les partager avec la communauté</p>
         </div>
 
         <form className='mt-16 max-w-3xl' onSubmit={handleSubmit}>
           <div className='flex flex-col gap-5'>
             <Form 
-              labelName="Your name"
+              labelName="Votre Nom"
               type="text"
               name="name"
               placeholder="John"
@@ -89,10 +89,10 @@ const Poste = () => {
               handleChange={handleChange}
             />
             <Form 
-              labelName="Prompt"
+              labelName="Entré"
               type="text"
               name="prompt"
-              placeholder="a sea otter with a pearl earring"
+              placeholder="une loutre de mer avec une boucle d’oreille perlée"
               value={form.prompt}
               handleChange={handleChange}
               isSurpriseMe
@@ -119,16 +119,16 @@ const Poste = () => {
             <button type='button'
               onClick={generateImage}
               className='text-white bg-green-700 font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5' >
-                {generatingImg ? 'Generating ...' : 'Generate'}
+                {generatingImg ? 'Génération ...' : 'Générer'}
             </button>
           </div>
 
           <div className='mt-10'>
-            <p className='mt-2 text-[#666e75] text-[14px]'>Once you have created the image you want, you can share it 
-              with other in the community </p>
+            <p className='mt-2 text-[#666e75] text-[14px]'>Une fois que vous avez créé l’image que vous voulez,
+             vous pouvez la partager avec d’autres dans la communauté </p>
               <button type="submit"
                 className='mt-3 text-white bg-[#6469ff] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center'>
-                {loading ? 'Sharing...' :'Share with the community'}
+                {loading ? 'Partage ...' :'Partager avec la communauté'}
               </button>
           </div>
         </form>
