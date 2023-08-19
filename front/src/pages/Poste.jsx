@@ -23,11 +23,12 @@ const Poste = () => {
     if(form.prompt && form.photo){
       setloading(true);//show loading icon while generating img
       try {
-        const response = await fetch('http://localhost:8080/api/v1/post',{
+        const response = await fetch('https://generate-image-dalle-e.onrender.com/api/v1/post',{
           method:'POST',
           headers:{'Content-Type':'application/json',},
           body:JSON.stringify(form)
         })
+        //http://localhost:8080
 
         await response.json(); //we got the response
         navigate('/');
@@ -52,7 +53,7 @@ const Poste = () => {
     if(form.prompt){
       try {
         setgeneratingImg(true);
-        const response = await fetch('http://localhost:8080/api/v1/dalle', {
+        const response = await fetch('https://generate-image-dalle-e.onrender.com/api/v1/dalle', {
           method:'POST',
           headers:{
             'Content-Type':'application/json',

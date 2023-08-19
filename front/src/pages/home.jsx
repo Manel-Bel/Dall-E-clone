@@ -21,8 +21,9 @@ const Home = () => {
     useEffect(() => {
         const fetchPosts = async () => {
             setloading(true);
+            // http://localhost:8080
             try {
-                const response = await fetch('http://localhost:8080/api/v1/post',{
+                const response = await fetch('https://generate-image-dalle-e.onrender.com/api/v1/post',{
                     method:'GET',
                     headers:{
                         'Content-Type': 'application/json',
